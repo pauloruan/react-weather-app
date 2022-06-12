@@ -1,9 +1,15 @@
 import React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Card404 from '../../components/Card404';
+import PageContainer from './style';
 
 export default function NotFound(): React.FunctionComponentElement<{}> {
   return (
-    <div>
-      <h1>Not found page</h1>
-    </div>
+    <PageContainer>
+      <Header />
+      <Card404 />
+      <Footer />
+    </PageContainer>
   );
 }
