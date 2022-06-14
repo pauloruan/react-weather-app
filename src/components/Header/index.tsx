@@ -12,7 +12,6 @@ export default function Header(): React.FunctionComponentElement<{}> {
       <h1>Weather App</h1>
       <nav>
         <ButtonSwitch />
-        <a href="/contact">Contacts</a>
       </nav>
     </Container>
   );
