@@ -16,9 +16,14 @@ const Container = styled.div`
     border-radius: 0.5rem;
     font-size: larger;
     font-weight: bolder;
-    background: var(--text-color-base);
-    color: var(--background-color-base);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.font};
+    box-shadow: var(--box-shadow-base);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: ${({ theme }) => theme.colors.font};
+      background: ${({ theme }) => theme.colors.secondary};
+    }
   }
 
   input {
@@ -31,11 +36,11 @@ const Container = styled.div`
     text-align: center;
     border-radius: 0.5rem;
     background: transparent;
-    color: var(--text-color-base);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: ${({ theme }) => theme.colors.font};
+    box-shadow: var(--box-shadow-base);
     transition: all 0.3s ease-in-out;
     &::placeholder {
-    color: var(--text-color-base);
+    color: ${({ theme }) => theme.colors.secondary};
     text-align: center;
     font-size: large;
   }

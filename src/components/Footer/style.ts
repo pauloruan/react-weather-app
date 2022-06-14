@@ -9,8 +9,8 @@ const Container = styled.footer`
   justify-content: center;
   position: fixed;
   bottom: 0;
-  background: var(--primary-color-base);
-  color: var(--text-color-base);
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.font};
   padding: 0 1rem;
   text-align: center;
   font-weight: bolder;

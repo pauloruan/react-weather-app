@@ -7,8 +7,8 @@ const PageContainer = styled.body`
   flex-direction: column;
   align-items: center;
   justify-content: flex;
-  background: var(--background-color-base);
-  color: var(--text-color-base);
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.font};
 `;
 
 export default PageContainer;

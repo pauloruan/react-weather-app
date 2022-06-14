@@ -10,11 +10,10 @@ const Container = styled.div`
   align-items: center;
   align-content: center;
   border-radius: 0.5rem;
-  background: var(--card-color-base);
-  color: var(--text-color-base);
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.font};
   padding: 0 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-
+  box-shadow: var(--box-shadow-base);
 `;
 
 export default Container;

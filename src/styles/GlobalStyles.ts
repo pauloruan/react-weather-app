@@ -2,12 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --primary-color-base: #007ee5;
-    --secondary-color-base: #7b8994;
-    --background-color-base: #f2f2f4;
-    --card-color-base: #c0c0c8;
-    --text-color-base: #222;
+    --primary-color-base: #278AB0;
+    --secondary-color-base: #1C4670;
+    --background-color-base: #EAEAE0;
+    --font-color-base: #222;
     --font-base: 'Nunito', sans-serif;
+    --box-shadow-base: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   }
 
   * {

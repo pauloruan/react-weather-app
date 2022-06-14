@@ -1,4 +1,6 @@
 import React, { createContext, useMemo, useState } from 'react';
+import { DefaultTheme } from 'styled-components';
+import light from '../styles/themes/ligth';
 
 type PropsSearchContext = {
   search: string;
@@ -11,11 +13,11 @@ type PropsSearchContext = {
   setCountry: React.Dispatch<React.SetStateAction<string>>;
   tempCelsius: number;
   setTempCelsius: React.Dispatch<React.SetStateAction<number>>;
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  theme: DefaultTheme;
+  setTheme: React.Dispatch<React.SetStateAction<DefaultTheme>>;
 };
 
-const DEFALUT_VALUE = {
+const DEFAULT_VALUE = {
   search: '',
   setSearch: () => {},
   name: '',
@@ -26,19 +28,19 @@ const DEFALUT_VALUE = {
   setCountry: () => {},
   tempCelsius: 0,
   setTempCelsius: () => {},
-  theme: 'light',
+  theme: light,
   setTheme: () => {},
 };
 
-const SearchContext = createContext<PropsSearchContext>(DEFALUT_VALUE);
+const SearchContext = createContext<PropsSearchContext>(DEFAULT_VALUE);
 
 export function SearchProvider({ children }: { children: React.ReactNode }): React.ReactElement {
-  const [search, setSearch] = useState(DEFALUT_VALUE.search);
-  const [name, setName] = useState(DEFALUT_VALUE.name);
-  const [region, setRegion] = useState(DEFALUT_VALUE.region);
-  const [country, setCountry] = useState(DEFALUT_VALUE.country);
-  const [tempCelsius, setTempCelsius] = useState(DEFALUT_VALUE.tempCelsius);
-  const [theme, setTheme] = useState(DEFALUT_VALUE.theme);
+  const [search, setSearch] = useState(DEFAULT_VALUE.search);
+  const [name, setName] = useState(DEFAULT_VALUE.name);
+  const [region, setRegion] = useState(DEFAULT_VALUE.region);
+  const [country, setCountry] = useState(DEFAULT_VALUE.country);
+  const [tempCelsius, setTempCelsius] = useState(DEFAULT_VALUE.tempCelsius);
+  const [theme, setTheme] = useState(DEFAULT_VALUE.theme);
 
   const memo = {
     search,

@@ -8,10 +8,13 @@ export default function CardResult(): React.FunctionComponentElement<{}> {
     tempCelsius,
     region,
     country,
+    theme,
   } = useContext(SearchContext);
 
   return (
-    <Container>
+    <Container
+      theme={theme}
+    >
       <h1>{`${tempCelsius} °C`}</h1>
       <h2>{name}</h2>
       <h3>{`${region}, ${country}`}</h3>

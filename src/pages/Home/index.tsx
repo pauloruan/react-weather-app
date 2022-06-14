@@ -7,10 +7,13 @@ import SearchContext from '../../context/GlobalContext';
 import PageContainer from './style';
 
 export default function Home(): React.FunctionComponentElement<{}> {
-  const { country, name } = useContext(SearchContext);
+  const { country, name, theme } = useContext(SearchContext);
+
   return (
     <div>
-      <PageContainer>
+      <PageContainer
+        theme={theme}
+      >
         <Header />
         <SearchBar />
         {

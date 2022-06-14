@@ -11,6 +11,7 @@ export default function SearchBar(): React.FunctionComponentElement<{}> {
     setRegion,
     setCountry,
     setName,
+    theme,
   } = useContext(SearchContext);
 
   const handleChange = (): void => {
@@ -24,7 +25,9 @@ export default function SearchBar(): React.FunctionComponentElement<{}> {
   };
 
   return (
-    <Container>
+    <Container
+      theme={theme}
+    >
       <input
         type="text"
         placeholder="Enter your city here..."

@@ -8,8 +8,8 @@ const Container = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  background: var(--background-color-base);
-  color: var(--text-color-base);
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.font};
 
   img {
     padding: 4rem;
