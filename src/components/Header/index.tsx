@@ -10,9 +10,7 @@ export default function Header(): React.FunctionComponentElement<{}> {
       theme={theme}
     >
       <h1>Weather App</h1>
-      <nav>
-        <ButtonSwitch />
-      </nav>
+      <ButtonSwitch />
     </Container>
   );
 }
