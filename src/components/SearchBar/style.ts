@@ -2,12 +2,17 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  height: 10rem;
+  height: 20%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+
+  @media(max-width: 768px) {
+    width: 100%;
+    height: 20%;
+  }
+
   button {
     width: 10%;
     height: 30%;
@@ -23,6 +28,16 @@ const Container = styled.div`
     &:hover {
       color: ${({ theme }) => theme.colors.font};
       background: ${({ theme }) => theme.colors.secondary};
+    }
+
+    @media(max-width: 768px) {
+      width: 20%;
+      height: 30%;
+    }
+
+    @media(max-width: 480px) {
+      width: 25%;
+      height: 30%;
     }
   }
 
@@ -43,6 +58,16 @@ const Container = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
     text-align: center;
     font-size: large;
+
+    @media(max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media(max-width: 480px) {
+      width: 100%;
+      height: 100%;
+    }
   }
 
 }`;
